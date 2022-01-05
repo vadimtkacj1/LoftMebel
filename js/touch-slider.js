@@ -42,7 +42,6 @@ function start() {
     screenWidth = window.screen.width;
     let slideWidth = images[0].offsetWidth;
     width = document.querySelector('.touch-slider').offsetWidth;
-    // sliderLine.style.width = width * images.length + 'px';
         let slideIndex = 0;
             let posInit = 0;
             let posX1 = 0;
