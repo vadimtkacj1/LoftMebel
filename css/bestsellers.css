@@ -1,0 +1,50 @@
+.bestsellers {
+  color: #414141;
+}
+
+.bestsellers_heading {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card {
+  background-color: red;
+  width: 263px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 380px;
+  padding: 40px 30px;
+  /* margin: 0px 15px 20px 0; */
+}
+
+.card-health {
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.card-heading {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card-text {
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+  margin: 5px 0px 10px 0px;
+}
+
+.card-price {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.card-img {
+  margin: 40px 0px 55px 0px;
+}
