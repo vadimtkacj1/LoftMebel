@@ -103,7 +103,7 @@ function start() {
                 return;
                 }
         
-                sliderLine.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+                sliderLine.style.transform = `translate3d(${200}px, 0px, 0px)`;
             }
         
             };
