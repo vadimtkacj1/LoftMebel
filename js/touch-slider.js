@@ -1,3 +1,38 @@
+// const images = document.querySelectorAll('.touch-slider .touch-slider-line img');
+// const sliderLine = document.querySelector('.touch-slider .touch-slider-line');
+// let count = 0;
+// let width;
+
+// function init() {
+//     console.log('resize');
+//     width = 40;
+//     rollSlider();
+// }
+
+// init();
+// window.addEventListener('resize', init);
+
+// document.querySelector('.slider-next').addEventListener('click', function () {
+//     count++;
+//     if (count >= images.length) {
+//         count = 0;
+//     }
+//     rollSlider();
+// });
+
+// document.querySelector('.slider-prev').addEventListener('click', function () {
+//     count--;
+//     if (count < 0) {
+//         count = images.length - 1;
+//     }
+//     rollSlider();
+// });
+
+// function rollSlider() {
+//     sliderLine.style.transform = 'translate(-' + count * width + 'px)';
+// }
+
+
 function start() {
     const images = document.querySelectorAll('.touch-slider .touch-slider-line div img');
     const sliderLine = document.querySelector('.touch-slider .touch-slider-line');
@@ -7,7 +42,7 @@ function start() {
     screenWidth = window.screen.width;
     let slideWidth = images[0].offsetWidth;
     width = document.querySelector('.touch-slider').offsetWidth;
-    sliderLine.style.width = width * images.length + 'px';
+    // sliderLine.style.width = width * images.length + 'px';
         let slideIndex = 0;
             let posInit = 0;
             let posX1 = 0;
@@ -27,23 +62,20 @@ function start() {
             return (event.type.search('touch') !== -1) ? event.touches[0] : event;
             };
             let slide = function() {
-            if (transition) {
-                sliderLine.style.transition = 'transform .5s';
-            }
-            sliderLine.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
+
+                let io = 423 - screenWidth;
+
+                    sliderLine.style.transform = `translate3d(-${io}px, 0px, 0px)`;
+        
             };
             let swipeStart = function() {
             let evt = getEvent();
-        
             if (allowSwipe) {
         
                 swipeStartTime = Date.now();
                 
                 transition = true;
-        
-                nextTrf = (slideIndex + 1) * -slideWidth;
-                prevTrf = (slideIndex - 1) * -slideWidth;
-        
+
                 posInit = posX1 = evt.clientX;
                 posY1 = evt.clientY;
         
@@ -61,11 +93,10 @@ function start() {
             let swipeAction = function() {
         
             let evt = getEvent();
-            let transform = +((width * images.length) - screenWidth);
+            let transform = +width;
         
             posX2 = posX1 - evt.clientX;
             posX1 = evt.clientX;
-        
             posY2 = posY1 - evt.clientY;
             posY1 = evt.clientY;
         
@@ -98,12 +129,10 @@ function start() {
                 }
                 }
         
-                if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
-                reachEdge();
-                return;
-                }
-        
-                sliderLine.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
+        let pop = transform - posX2
+
+            sliderLine.style.transform = `translate3d(${pop}px, 0px, 0px)`;
+
             }
         
             };
@@ -151,11 +180,6 @@ function start() {
             }
             allowSwipe = false;
             };
-            let reachEdge = function() {
-            transition = false;
-            swipeEnd();
-            allowSwipe = true;
-            };
         
             sliderLine.style.transform = 'translate3d(0px, 0px, 0px)';
         sliderList.classList.add('grab');
@@ -166,3 +190,4 @@ function start() {
 }
 window.addEventListener('resize', start);
 start();
+

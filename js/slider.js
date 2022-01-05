@@ -77,9 +77,6 @@ function start() {
             
             transition = true;
       
-            nextTrf = (slideIndex + 1) * -slideWidth;
-            prevTrf = (slideIndex - 1) * -slideWidth;
-      
             posInit = posX1 = evt.clientX;
             posY1 = evt.clientY;
       
@@ -133,12 +130,7 @@ function start() {
                 allowSwipe = true;
               }
             }
-      
-            if (posInit > posX1 && transform < nextTrf || posInit < posX1 && transform > prevTrf) {
-              reachEdge();
-              return;
-            }
-      
+
             sliderLine.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
           }
       
@@ -186,11 +178,6 @@ function start() {
             }
           }
           allowSwipe = false;
-        };
-        let reachEdge = function() {
-          transition = false;
-          swipeEnd();
-          allowSwipe = true;
         };
       
         sliderLine.style.transform = 'translate3d(0px, 0px, 0px)';
