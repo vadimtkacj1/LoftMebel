@@ -1,0 +1,33 @@
+.touch-slide-img {
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+}
+
+.touch-slider-line {
+  display: flex;
+}
+
+.touch-slide-text {
+  font-size: 9px;
+  text-align: center;
+}
+
+.touch-slide:not(:last-child) {
+  margin-right: 5px;
+}
+
+.touch-slider {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.touch-slider-line {
+  display: flex;
+  left: 0;
+  transition: all ease 1s;
+}
