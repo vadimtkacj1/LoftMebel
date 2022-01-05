@@ -61,7 +61,7 @@ function start() {
             let swipeAction = function() {
         
             let evt = getEvent();
-            let transform = +(screenWidth - width);
+            let transform = +width;
 
             posX2 = posX1 - evt.clientX;
             posX1 = evt.clientX;
