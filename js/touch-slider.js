@@ -61,8 +61,8 @@ function start() {
             let swipeAction = function() {
         
             let evt = getEvent();
-            let transform = +width;
-
+            let transform = +((width * images.length) - screenWidth);
+        
             posX2 = posX1 - evt.clientX;
             posX1 = evt.clientX;
         
@@ -103,7 +103,7 @@ function start() {
                 return;
                 }
         
-                sliderLine.style.transform = `translate3d(${200}px, 0px, 0px)`;
+                sliderLine.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
             }
         
             };
