@@ -1,0 +1,22 @@
+.path {
+    font-size: 12px;
+    line-height: 14px;
+    color: #969696;
+    pointer-events: none;
+    margin: 20px 0;
+  }
+  
+  .path a {
+    color: #969696;
+    pointer-events: all;
+    transition: all 0.2s ease 0s;
+    margin: 0 5px;
+  }
+  
+  .path a:hover {
+    color: #636363;
+  }
+  
+  .path a:first-child {
+    margin-left: 0;
+  }

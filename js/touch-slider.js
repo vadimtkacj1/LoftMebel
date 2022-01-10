@@ -498,8 +498,7 @@ scroll(x, transition) {
 
     // прописываем новые стили для смещения (прокручивания) галереи
     // к следующему элементу
-    if (x > -140) {
- 
+    if (x > -360) {
         this.stage.style.cssText = `width:${this.widths}px; height:${this.items[0].offsetHeight}px; transform:translateX(${x}px); transition:${transition}s`;
     } else {
         x = 0
