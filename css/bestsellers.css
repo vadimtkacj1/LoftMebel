@@ -285,10 +285,6 @@
     display: none;
   }
 
-  .card {
-    width: 145px;
-  }
-
   .card-text {
     font-size: 9px;
   }
@@ -327,5 +323,6 @@
 
   .card {
     padding: 25px 10px 15px 10px;
+    width: 140px;
   }
 }

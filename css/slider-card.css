@@ -33,3 +33,9 @@
 .slider-button {
   padding: 20px;
 }
+
+@media (max-width: 500px) {
+  .slider-button {
+    display: none;
+  }
+}
