@@ -38,8 +38,10 @@ let cards = document.querySelectorAll('.card');
 
 if (cards.length > 0) {
   for (let card of cards) {
-    card.addEventListener('click', () => {
-      document.location.href = 'card-product.html';
+    card.addEventListener('click', e => {
+      if (!e.target.classList.contains('card-hidden-button')) {
+        document.location.href = 'card-product.html';
+      }
     });
   }
 }
