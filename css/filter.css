@@ -1,0 +1,141 @@
+.chapter-item {
+  display: flex;
+  width: 223px;
+  padding: 5px 10px;
+  background: #f8f8f8;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.chapter-item-heading {
+  font-size: 12px;
+  color: #686868;
+}
+
+.chapter-heading {
+  font-size: 14px;
+  color: #414141;
+  margin: 20px 0px;
+}
+
+.color-items img {
+  width: 18px;
+  height: 18px;
+}
+
+.color-items img:not(:last-child) {
+  margin-right: 10px;
+}
+
+.brand-item {
+  display: flex;
+}
+
+.brand-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.brand-item img {
+  width: 18px;
+  height: 18px;
+}
+
+.brand-item div {
+  font-size: 12px;
+  color: #414141;
+  margin-left: 10px;
+}
+
+.fillter-button {
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 15px;
+  color: #245462;
+}
+
+.fillter-button:active {
+  color: black;
+}
+
+.price-items {
+  justify-content: space-between;
+  display: flex;
+}
+
+.filter {
+  width: 263px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+  padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-filter {
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+  padding: 20px;
+  height: 100%;
+  width: 138px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  background: #f9f9f9;
+  display: none;
+}
+
+.filter-but-clean {
+  display: none;
+}
+
+.filter-but-clean div {
+  font-size: 14px;
+  margin: 0 auto;
+  color: #414141;
+}
+
+.button-filter:active {
+  position: relative;
+  top: 1px;
+}
+
+.price-items div {
+  background-color: #f8f8f8;
+  padding: 5px 10px;
+}
+
+@media (max-width: 500px) {
+  .filter {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background: #ffffff;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+  }
+
+  .chapter-item {
+    width: 100%;
+  }
+
+  .filter-but-clean {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: flex-end;
+  }
+
+  .button-filter {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .block-cards {
+    margin-left: 10px;
+  }
+}

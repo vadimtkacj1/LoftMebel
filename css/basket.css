@@ -1,0 +1,197 @@
+.basket-block {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #414141;
+  margin-bottom: 20px;
+}
+
+.basket-cards {
+  font-size: 16px;
+}
+
+.basket-card-block {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+}
+
+.wrapper-basket-card {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.wrapper-basket-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.total-cost {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: flex-end;
+  color: #414141;
+  margin-top: 40px;
+}
+
+.total-cost_price {
+  font-size: 16px;
+  margin: 0px 25px 0px 15px;
+  font-weight: bold;
+}
+
+.total-cost_button {
+  font-size: 13px;
+  color: #ffffff;
+  background: #245462;
+  padding: 10px 50px;
+}
+
+.basket-card {
+  display: flex;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.07);
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+
+.wrapper-basket-card-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.basket-card-block_items {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  color: #414141;
+}
+
+.basket-card-block_heading {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.basket-card-block_item {
+  display: flex;
+  flex-direction: row;
+}
+
+.basket-card-block_item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.basket-card-block_item-text {
+  color: #9e9e9e;
+  margin-left: 5px;
+}
+
+.basket-card-block_item-color {
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.basket-card-img {
+  width: 57px;
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .basket-card-block_items {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 550px) {
+  .basket-card-block_items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .total-cost {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  .total-cost_price {
+    font-size: 14px;
+  }
+
+  .total-cost_button {
+    font-size: 11px;
+    padding: 5px 25px;
+  }
+
+  .basket-card-block_item {
+    font-size: 10px;
+  }
+  .basket-card,
+  .wrapper-basket-card-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .basket-price {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .wrapper-basket-card-box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .basket-card-block_items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .total-cost {
+    font-size: 10px;
+    margin-top: 20px;
+  }
+
+  .total-cost_price {
+    font-size: 12px;
+  }
+
+  .total-cost_button {
+    font-size: 8px;
+    padding: 5px 10px;
+  }
+
+  .basket-card-block_item {
+    font-size: 8px;
+  }
+
+  .wrapper-basket-card-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrapper-basket-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .basket-price {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+
+  .basket-card-img {
+    width: 100%;
+    height: 30px;
+  }
+}

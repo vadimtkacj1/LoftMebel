@@ -2,6 +2,11 @@
   color: #414141;
 }
 
+#bestsellers {
+  display: flex;
+  flex-direction: row;
+}
+
 .wrapper-bestsellers {
   margin-bottom: 40px;
 }
@@ -33,6 +38,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 50px;
 }
 
 .card-hidden-block {
@@ -271,6 +277,11 @@
     font-size: 5px;
   }
 }
+@media (max-width: 500px) {
+  #block-card {
+    flex-wrap: nowrap;
+  }
+}
 
 @media (max-width: 400px) {
   .card:not(:nth-child(3n)) {
@@ -324,5 +335,11 @@
   .card {
     padding: 25px 10px 15px 10px;
     width: 140px;
+  }
+
+  .block-card {
+    margin-top: 50px;
+    width: 290px;
+    margin-left: -100px;
   }
 }

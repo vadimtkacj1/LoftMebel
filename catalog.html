@@ -5,49 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="css/style-reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/header-and-footer.css">
+    <link rel="stylesheet" href="css/path.css">
     <link rel="stylesheet" href="css/touch-slider.css">
-    <link rel="stylesheet" href="css/bestsellers.css">
-    <link rel="stylesheet" href="css/mainHeaderFooter.css">
     <link rel="stylesheet" href="css/iconsFont.css">
+    <link rel="stylesheet" href="css/options.css">
+    <link rel="stylesheet" href="css/filter.css">
+    <link rel="stylesheet" href="css/bestsellers.css">
     <link rel="stylesheet" href="css/font.css">
-    <title>Document</title>
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
-            <div class="header-nav">
-                <div class="container">
-                    <ul class="header-nav__left">
-                        <li class="header-nav__item">
-                            <a href="index.html">Главная</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="aboutUs.html">О нас</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="contact.html">Контакты</a>
-                        </li>
-                    </ul>
-                    <ul class="header-nav__right">
-                        <li class="header-nav__item">
-                            <a href="tel:+89648999119">
-                                <img src="img/Header/phone.svg" alt="I couldn't boot">
-                                <span>8 (964) 89 99 119</span>
-                            </a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a href="contact.html">
-                                <img src="img/Header/delivery.svg" alt="I couldn't boot">
-                                <span>Доставка</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
             <div class="header-info">
                 <div class="container">
                     <div class="header-info__logo">
@@ -56,6 +29,11 @@
                         </div>
                         <a href="index.html"><img src="img/Header/logo.svg" alt="I couldn't boot"></a>
                     </div>
+                    <ul class="header-info__nav">
+                        <li class="header-info__nav-link"><a href="index.html">Главная</a></li>
+                        <li class="header-info__nav-link"><a href="aboutUs.html">О нас</a></li>
+                        <li class="header-info__nav-link"><a href="contact.html">Контакты</a></li>
+                    </ul>
                     <div class="header-info__search input">
                         <img src="img/Header/search.svg" alt="I couldn't boot">
                         <input type="text" placeholder="Поиск">
@@ -309,36 +287,12 @@
             </div>
         </section>
         <section>
-            <div class="wrapper-slider">
-                <div class="slider">
-                    <div class="slider-button_block">
-                        <img src="img/arrow-left.svg" alt="script" class="arrow-img arrow-img_left" draggable="false">
-                        <img src="img/arrow-right.svg" alt="s" class="arrow-img arrow-img_right" draggable="false">
-                    </div>
-                    <div class="slider-line">
-                        <div class="slide">
-                            <img src="img/slide-1.jpg" alt="s" class="slide-img" draggable="false">
-                            <div class="slide-box_two">
-                                <div class="slide-heading">Современная и удобная мебель</div>
-                                <div class="slide-text">С доставкой по Краснодарскому краю</div>
-                            </div>
-                            <div class="slide-box">
-                                <div class="slide-heading">loft мебель</div>
-                                <div class="slide-text">Современная и удобная мебель в Анапе</div>
-                                <a href="catalog.html" class="slide-button">СМОТРЕТЬ КАТАЛОГ</a>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="img/slide-1.jpg" alt="s" class="slide-img" draggable="false">
-                            <div class="slide-box_two">
-                                <div class="slide-heading">Современная и удобная мебель</div>
-                                <div class="slide-text">С доставкой по Краснодарскому краю</div>
-                            </div>
-                            <div class="slide-box">
-                                <div class="slide-heading">loft мебель</div>
-                                <div class="slide-text">Современная и удобная мебель в Анапе</div>
-                                <a href="catalog.html" class="slide-button">СМОТРЕТЬ КАТАЛОГ</a>
-                            </div>
+            <div class="wrapper-path">
+                <div class="container">
+                    <div class="path">
+                        <div class="container">
+                            <p><a href="index.html">Главная</a> / <a href="catalog.html">Гостинные</a> / <a
+                                    href="catalog.html">Мягкая мебель</a> / <a href="catalog.html">Диваны</a></p>
                         </div>
                     </div>
                 </div>
@@ -347,39 +301,81 @@
         <section>
             <div class="wrapper-bestsellers">
                 <div class="container">
-                    <div class="bestsellers">
-                        <div class="bestsellers_heading">Хиты продаж</div>
+                    <div class="bestsellers" id="bestsellers">
+                        <div class="button-filter">Фильтр</div>
+                        <div class="filter">
+                            <div class="filter-but-clean">
+                                <div>Фильтр</div>
+                                <img src="img/x.svg" alt="s">
+                            </div>
+                            <div class="chapter">
+                                <div class="chapter-heading">Раздел</div>
+                                <div class="chapter-items">
+                                    <div class="chapter-item">
+                                        <div class="chapter-item-heading">Гостинные</div>
+                                        <img src="img/arrow-fillter.svg" alt="s">
+                                    </div>
+                                    <div class="chapter-item">
+                                        <div class="chapter-item-heading">Мягкая мебель</div>
+                                        <img src="img/arrow-fillter.svg" alt="s">
+                                    </div>
+                                    <div class="chapter-item">
+                                        <div class="chapter-item-heading">Диваны</div>
+                                        <img src="img/arrow-fillter.svg" alt="s">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="price">
+                                <div class="chapter-heading">Цена</div>
+                                <img src="img/toddler.svg" alt="s">
+                                <div class="price-items">
+                                    <div>2 000 ₽ </div>
+                                    <img src="img/line-price.svg" alt="s">
+                                    <div>102 000 ₽ </div>
+                                </div>
+                            </div>
+                            <div class="color">
+                                <div class="chapter-heading">Цвет</div>
+                                <div class="color-items">
+                                    <img src="img/color-3.svg" alt="d" draggable="false">
+                                    <img src="img/color-1.svg" alt="d" draggable="false">
+                                    <img src="img/color-2.svg" alt="d" draggable="false">
+                                    <img src="img/color-4.svg" alt="d" draggable="false">
+                                    <img src="img/color-5.svg" alt="d" draggable="false">
+                                    <img src="img/color-1.svg" alt="d" draggable="false">
+                                </div>
+                            </div>
+                            <div class="brand">
+                                <div class="chapter-heading">Бренд</div>
+                                <div class="brand-items">
+                                    <div class="brand-item">
+                                        <img src="img/color-brand.svg" alt="d" draggable="false">
+                                        <div>Динс</div>
+                                    </div>
+                                    <div class="brand-item">
+                                        <img src="img/color-brand.svg" alt="d" draggable="false">
+                                        <div>Кускен</div>
+                                    </div>
+                                    <div class="brand-item">
+                                        <img src="img/color-brand.svg" alt="d" draggable="false">
+                                        <div>Эби</div>
+                                    </div>
+                                    <div class="brand-item">
+                                        <img src="img/color-brand.svg" alt="d" draggable="false">
+                                        <div>Реджио</div>
+                                    </div>
+                                    <div class="brand-item">
+                                        <img src="img/color-brand.svg" alt="d" draggable="false">
+                                        <div>Сайле</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fillter-button">Показать еще</div>
+                        </div>
                         <div class="block-cards">
                             <div class="block-card">
                                 <div class="card">
                                     <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-1.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Валенсия Beige</div>
-                                    <div class="card-text">Барные стулья</div>
-                                    <div class="card-price">2 300₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
                                     <img src="img/card-2.svg" alt="nophoto" class="card-img">
                                     <div class="card-heading">Толикс-2 White Gloss</div>
                                     <div class="card-text">Барные стулья</div>
@@ -391,7 +387,7 @@
                                                 <div class="card-hidden-block_item__heading">ШИРИНА</div>
                                                 <div class="card-hidden-block_item__size">43 СМ</div>
                                             </div>
-                                            <img src="img/×.png" alt="">
+                                            <img src="img/×.png" alt="s">
                                             <div class="card-hidden-block_item">
                                                 <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
                                                 <div class="card-hidden-block_item__size">43 СМ</div>
@@ -465,10 +461,41 @@
                                 </div>
                                 <div class="card">
                                     <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-1.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Валенсия Beige</div>
+                                    <img src="img/card-2.svg" alt="nophoto" class="card-img">
+                                    <div class="card-heading">Толикс-2 White Gloss</div>
                                     <div class="card-text">Барные стулья</div>
-                                    <div class="card-price">2 300₽</div>
+                                    <div class="card-price">4 690₽</div>
+                                    <div class="card-hidden">
+                                        <div class="card-hidden-heading">Размеры</div>
+                                        <div class="card-hidden-block">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
+                                                <div class="card-hidden-block_item__size">43 СМ</div>
+                                            </div>
+                                            <img src="img/×.png" alt="">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
+                                                <div class="card-hidden-block_item__size">43 СМ</div>
+                                            </div>
+                                            <img src="img/×.png">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
+                                                <div class="card-hidden-block_item__size">77 СМ</div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-sale">
+                                        <img src="img/Vectorr.svg" alt="s" class="card-sale_img">
+                                        <div class="card-sale_text">-25%</div>
+                                    </div>
+                                    <img src="img/card-health.svg" alt="s" class="card-health">
+                                    <img src="img/card-3.svg" alt="nophoto" class="card-img">
+                                    <div class="card-heading">Динс Velvet Yellow</div>
+                                    <div class="card-text">Диваны</div>
+                                    <div class="card-price">28 490₽</div>
                                     <div class="card-hidden">
                                         <div class="card-hidden-heading">Размеры</div>
                                         <div class="card-hidden-block">
@@ -492,206 +519,9 @@
                                 </div>
                                 <div class="card">
                                     <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-2.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Толикс-2 White Gloss</div>
-                                    <div class="card-text">Барные стулья</div>
-                                    <div class="card-price">4 690₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <div class="card-sale">
-                                        <img src="img/Vectorr.svg" alt="s" class="card-sale_img">
-                                        <div class="card-sale_text">-25%</div>
-                                    </div>
-                                    <img src="img/card-health.svg" alt="s" class="card-health">
-                                    <img src="img/card-3.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Динс Velvet Yellow</div>
-                                    <div class="card-text">Диваны</div>
-                                    <div class="card-price">28 490₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
                                     <img src="img/card-4.svg" alt="nophoto" class="card-img">
                                     <div class="card-heading">Кускен Navy Blue</div>
                                     <div class="card-text">Диваны</div>
-                                    <div class="card-price">2 300₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-1.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Валенсия Beige</div>
-                                    <div class="card-text">Барные стулья</div>
-                                    <div class="card-price">2 300₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-2.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Толикс-2 White Gloss</div>
-                                    <div class="card-text">Барные стулья</div>
-                                    <div class="card-price">4 690₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <div class="card-sale">
-                                        <img src="img/Vectorr.svg" alt="s" class="card-sale_img">
-                                        <div class="card-sale_text">-25%</div>
-                                    </div>
-                                    <img src="img/card-health.svg" alt="s" class="card-health">
-                                    <img src="img/card-3.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Динс Velvet Yellow</div>
-                                    <div class="card-text">Диваны</div>
-                                    <div class="card-price">28 490₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-4.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Кускен Navy Blue</div>
-                                    <div class="card-text">Диваны</div>
-                                    <div class="card-price">2 300₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-1.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Валенсия Beige</div>
-                                    <div class="card-text">Барные стулья</div>
                                     <div class="card-price">2 300₽</div>
                                     <div class="card-hidden">
                                         <div class="card-hidden-heading">Размеры</div>
@@ -801,9 +631,67 @@
                                 </div>
                                 <div class="card card-not">
                                     <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-1.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Валенсия Beige</div>
+                                    <img src="img/card-2.svg" alt="nophoto" class="card-img">
+                                    <div class="card-heading">Толикс-2 White Gloss</div>
                                     <div class="card-text">Барные стулья</div>
+                                    <div class="card-price">4 690₽</div>
+                                    <div class="card-hidden">
+                                        <div class="card-hidden-heading">Размеры</div>
+                                        <div class="card-hidden-block">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
+                                                <div class="card-hidden-block_item__size">43 СМ</div>
+                                            </div>
+                                            <img src="img/×.png" alt="">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
+                                                <div class="card-hidden-block_item__size">43 СМ</div>
+                                            </div>
+                                            <img src="img/×.png">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
+                                                <div class="card-hidden-block_item__size">77 СМ</div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
+                                    </div>
+                                </div>
+                                <div class="card card-not">
+                                    <div class="card-sale">
+                                        <img src="img/Vectorr.svg" alt="s" class="card-sale_img">
+                                        <div class="card-sale_text">-25%</div>
+                                    </div>
+                                    <img src="img/card-health.svg" alt="s" class="card-health">
+                                    <img src="img/card-3.svg" alt="nophoto" class="card-img">
+                                    <div class="card-heading">Динс Velvet Yellow</div>
+                                    <div class="card-text">Диваны</div>
+                                    <div class="card-price">28 490₽</div>
+                                    <div class="card-hidden">
+                                        <div class="card-hidden-heading">Размеры</div>
+                                        <div class="card-hidden-block">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
+                                                <div class="card-hidden-block_item__size">43 СМ</div>
+                                            </div>
+                                            <img src="img/×.png" alt="">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
+                                                <div class="card-hidden-block_item__size">43 СМ</div>
+                                            </div>
+                                            <img src="img/×.png">
+                                            <div class="card-hidden-block_item">
+                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
+                                                <div class="card-hidden-block_item__size">77 СМ</div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
+                                    </div>
+                                </div>
+                                <div class="card card-not">
+                                    <img src="img/card-health.svg" alt="" class="card-health">
+                                    <img src="img/card-4.svg" alt="nophoto" class="card-img">
+                                    <div class="card-heading">Кускен Navy Blue</div>
+                                    <div class="card-text">Диваны</div>
                                     <div class="card-price">2 300₽</div>
                                     <div class="card-hidden">
                                         <div class="card-hidden-heading">Размеры</div>
@@ -913,33 +801,6 @@
                                 </div>
                                 <div class="card card-not">
                                     <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-1.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Валенсия Beige</div>
-                                    <div class="card-text">Барные стулья</div>
-                                    <div class="card-price">2 300₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
                                     <img src="img/card-2.svg" alt="nophoto" class="card-img">
                                     <div class="card-heading">Толикс-2 White Gloss</div>
                                     <div class="card-text">Барные стулья</div>
@@ -1023,116 +884,34 @@
                                         <a href="#" class="card-hidden-button">Добавить в корзину</a>
                                     </div>
                                 </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-1.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Валенсия Beige</div>
-                                    <div class="card-text">Барные стулья</div>
-                                    <div class="card-price">2 300₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
+                            </div>
+                        </div>
+                        <div class="options" id="options-sort">
+                            <div class="options-menu-bloks">
+                                <div class="options-menu">
+                                    <div id="wrapper-options-menu-sort">
+                                        <div class="wrapper-options-menu_item-main"
+                                            id="wrapper-options-menu_item-main-sort">
+                                            <div class="options-menu_item-main" id="options-menu_item-main-sort">
+                                                <div id="options-color_text-sort">Сортировать</div>
                                             </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
+                                            <div class="wrapper-options-arrow">
+                                                <img src="img/line-sort.svg" alt="s" class="options-arrow"
+                                                    id="options-arrow-sort">
                                             </div>
                                         </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-2.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Толикс-2 White Gloss</div>
-                                    <div class="card-text">Барные стулья</div>
-                                    <div class="card-price">4 690₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <div class="card-sale">
-                                        <img src="img/Vectorr.svg" alt="s" class="card-sale_img">
-                                        <div class="card-sale_text">-25%</div>
-                                    </div>
-                                    <img src="img/card-health.svg" alt="s" class="card-health">
-                                    <img src="img/card-3.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Динс Velvet Yellow</div>
-                                    <div class="card-text">Диваны</div>
-                                    <div class="card-price">28 490₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
-                                    </div>
-                                </div>
-                                <div class="card card-not">
-                                    <img src="img/card-health.svg" alt="" class="card-health">
-                                    <img src="img/card-4.svg" alt="nophoto" class="card-img">
-                                    <div class="card-heading">Кускен Navy Blue</div>
-                                    <div class="card-text">Диваны</div>
-                                    <div class="card-price">2 300₽</div>
-                                    <div class="card-hidden">
-                                        <div class="card-hidden-heading">Размеры</div>
-                                        <div class="card-hidden-block">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ШИРИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png" alt="">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ГЛУБИНА</div>
-                                                <div class="card-hidden-block_item__size">43 СМ</div>
-                                            </div>
-                                            <img src="img/×.png">
-                                            <div class="card-hidden-block_item">
-                                                <div class="card-hidden-block_item__heading">ВЫСОТА</div>
-                                                <div class="card-hidden-block_item__size">77 СМ</div>
-                                            </div>
-                                        </div>
-                                        <a href="#" class="card-hidden-button">Добавить в корзину</a>
+                                        <ul class="options-menu_item-bloks" id="options-menu_item-bloks-sort">
+                                            <li class="options-menu_item-bloks__item"
+                                                id="options-menu_item-bloks__item-sort">
+                                                <div id="options-color_text-sort">по убыванию цены</div>
+                                            </li>
+                                            <li class="options-menu_item-bloks__item">
+                                                <div id="options-color_text-sort">по возрастанию цены</div>
+                                            </li>
+                                            <li class="options-menu_item-bloks__item">
+                                                <div id="options-color_text-sort">по популярности</div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -1222,9 +1001,10 @@
             </div>
         </footer>
     </div>
-    <script src="js/burger.js"></script>
-    <script src="js/slider.js"></script>
+    <script src="js/options.js"></script>
+    <script src="js/filter.js"></script>
     <script src="js/touch-slider.js"></script>
+    <script src="js/burger.js"></script>
 </body>
 
 </html>

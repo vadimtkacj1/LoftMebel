@@ -7,7 +7,7 @@ optionsMenuBloks.onclick = function(event) {
     let subBlockTwo = targetElement.parentElement.parentElement.children[1];
     let mainElement;
     let subBlockElement;
-    console.log(targetElement.className)
+
     if (targetElement.parentElement.className === 'options-menu_item-main' || targetElement.parentElement.className === 'wrapper-options-arrow') {
         if (subBlock.style.display === 'flex') return subBlock.style.display = "none";
         optionsMenuItemsBloks.forEach(e => e.style.display = 'none')
@@ -25,13 +25,6 @@ optionsMenuBloks.onclick = function(event) {
         subBlockElement = targetElement.outerHTML;
         targetElement.parentElement.innerHTML = mainElement.innerHTML;
         mainElement.innerHTML = subBlockElement;
-    }   
-    // if (targetElement.className == 'options-menu_item-main') {
-    //     subBlock.style.display = 'flex';
-    //     mainElement = targetElement;
-    //     console.log(mainElement)
-    // }
-    // if (targetElement.className === 'options-menu_item-bloks__item') {
-    //     mainElement.textContent = 'ss';
-    // }   
+        event.path[2].style.display = 'none'
+    }    
 }

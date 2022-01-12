@@ -45,7 +45,7 @@
 .gallery {
   width: 100%;
   visibility: hidden;
-  margin: 0 auto 30px;
+  margin: 0 auto;
 }
 .touch-slider {
   position: relative;
