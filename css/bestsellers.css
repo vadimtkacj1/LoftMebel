@@ -340,6 +340,9 @@
   .block-card {
     margin-top: 50px;
     width: 290px;
+  }
+
+  #block-card {
     margin-left: -100px;
   }
 }
