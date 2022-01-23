@@ -7,6 +7,7 @@ function start() {
     let screenWidth;
     let width;
 
+    
     width = document.querySelector('.block-cards').offsetWidth;
     screenWidth = window.screen.width;
 
